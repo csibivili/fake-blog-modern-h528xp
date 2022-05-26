@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div>
-      {posts.map((p) => (
-        <Article key={p.date.toISOString()} {...p} />
+      {posts.map((p, i) => (
+        <Article key={p.date.toISOString()} {...p} shared={i} />
       ))}
     </div>
   );

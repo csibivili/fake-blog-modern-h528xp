@@ -1,12 +1,13 @@
 import React from "react";
-import { IPost } from "src/interfaces";
+import { Post } from "src/interfaces";
 
-const Article = ({ title, body, date }: IPost) => {
+const Article = ({ title, body, date, shared }: Post) => {
   return (
     <article>
       <h1>{title}</h1>
-      <h1>{body}</h1>
-      <h1>{date.toLocaleDateString("hu")}</h1>
+      <p>{body}</p>
+      <p>{date.toLocaleDateString("hu")}</p>
+      <p>{`megosztva: ${shared}`}</p>
     </article>
   );
 };
