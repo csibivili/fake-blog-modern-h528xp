@@ -5,7 +5,7 @@ export const getPosts = (): Promise<IPost[]> => {
     .fill(0)
     .map(
       (_, i): IPost => ({
-        date: new Date(),
+        date: new Date(new Date().setDate(i)),
         body: "lorem ipsum",
         title: "Webshippy",
       })
